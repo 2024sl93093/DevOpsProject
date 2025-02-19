@@ -20,6 +20,7 @@ public class PalindromeController {
         Map<String, Object> response = new HashMap<>();
         response.put("input", input);
         response.put("isPalindrome", isPalindrome);
+
         return response;
 
     }
