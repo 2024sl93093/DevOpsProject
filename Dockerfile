@@ -2,13 +2,13 @@
 FROM eclipse-temurin:17-jdk-jammy
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /springbootimage
 
 # Copy the built application JAR
-COPY target/*.jar app.jar
+COPY target/*.jar springbootimage.jar
 
 # Expose the application port
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "springbootimage.jar"]
