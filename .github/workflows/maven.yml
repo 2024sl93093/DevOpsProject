@@ -60,8 +60,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build with maven
-        run: mvn run install
+      - name: Build with Maven
+        run: mvn clean install
+
       - name: Build and Push docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
@@ -72,9 +73,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t 2024sl93093/springbootapp:latest .
 
-      - name: Push Docker image
-        run: docker push 2024sl93093/springbootapp:latest
 
