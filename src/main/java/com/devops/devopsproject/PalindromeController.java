@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
+
 
 @RestController
 @RequestMapping("/api")
 public class PalindromeController {
     @GetMapping("/checkpalindrome/{input}")
-    public Map<String, Object> Greeting(@PathVariable("input") String input){
+    public Map<String, Object> checkPalindrome(@PathVariable("input") String input){
         String cleanedInput = input.replaceAll("\\s+", "").toLowerCase();
         String reversed=new StringBuilder(cleanedInput).reverse().toString();
         boolean isPalindrome = cleanedInput.equals(reversed);
