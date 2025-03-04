@@ -86,6 +86,7 @@ jobs:
           echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
           export KUBECONFIG=$(pwd)/kubeconfig.yaml
           kubectl apply -f app.yaml
+          kubectl rollout restart deployment palindromechecker
 
 
 

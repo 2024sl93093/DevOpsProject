@@ -24,6 +24,11 @@ public class PalindromeControllerTest {
                 .andExpect(jsonPath("$.input", is("radar")))
                 .andExpect(jsonPath("$.isPalindrome", is(true)));
     }
+    @Test
+    public void testPalindromeHomePage() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/api"))
+                .andExpect(status().isOk());
+    }
 
 }
 
