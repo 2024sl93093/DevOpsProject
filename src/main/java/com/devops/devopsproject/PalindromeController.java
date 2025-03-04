@@ -24,4 +24,11 @@ public class PalindromeController {
         return response;
 
     }
+    @GetMapping
+    public String checkPalindrome(){
+        String ans="Hello welocome to the home page of palindrome checker";
+        return ans;
+
+    }
+
 }
