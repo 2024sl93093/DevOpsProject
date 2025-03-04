@@ -24,5 +24,6 @@ public class PalindromeControllerTest {
                 .andExpect(jsonPath("$.input", is("radar")))
                 .andExpect(jsonPath("$.isPalindrome", is(true)));
     }
+
 }
 
