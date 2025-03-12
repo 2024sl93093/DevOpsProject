@@ -26,7 +26,7 @@ public class PalindromeController {
     }
     @GetMapping
     public String checkPalindrome(){
-        String ans="Hello welocome here again   to the home page  again of palindrome checker";
+        String ans="Hello how are u welcome back here";
         return ans;
 
     }
